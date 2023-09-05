@@ -1,0 +1,11 @@
+<div>
+<img [src] ="https://m.media-amazon.com/images/I/91G2Z-byH9L.jpg product.Image" alt="Product Image">
+    
+    <h3>{{ product.name }}</h3>
+    <p>Price: {{ product.price | currency: 'EGP' }}</p>
+    <p>Stock: <span [style.color]="product.stock === 0 ? 'red' : 'green'">
+      {{ product.stock === 0 ? 'Out of stock' : 'In stock' }}
+    </span></p>
+    <p>Created Date: {{ product.createdDate | date: 'MMMM yyyy' }}</p>
+    <!-- <button (click)="addToCart()">Add to Cart</button> -->
+  </div>
